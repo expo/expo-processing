@@ -1,6 +1,6 @@
 ![demo](demo.gif "demo")
 
-*NOTE: GIF above looks choppy because it's a GIF, the real thing is smooth, I promise...*
+*NOTE: GIF above looks weird some times because it's a GIF, the real thing is nice, I promise...*
 
 # expo-processing
 
