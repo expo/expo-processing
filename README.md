@@ -19,7 +19,7 @@ Display a `Processing.js` sketch.
 The component accepts all `View` layout props for specifying its layout.
 
 - `sketch`: A Processing.js sketch function that takes a `processing` instance
-  and calls Processing.js functions on it, such as the `sketchProc` function in
+  and calls Processing.js functions on it, such as the [`sketchProc` function](http://processingjs.org/articles/jsQuickStart.html#javascriptonlyprocessingcode) in
   the Processing.js documentation for writing JavaScript-only Processing.js
   code.
 
