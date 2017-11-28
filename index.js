@@ -6,6 +6,13 @@ Browser.window = window;
 const Processing = require('processing-js/src')(Browser);
 
 export class ProcessingView extends React.Component {
+  componentWillUnmount() {
+    if (this._p) {
+      this._p.exit();
+      this._p = null;
+    }
+  }
+
   render() {
     return (
       <GLView
@@ -65,6 +72,8 @@ export class ProcessingView extends React.Component {
     // The Processing sketch
 
     new Processing(canvas, (p) => {
+      this._p = p;
+
       // Force render viewport size / mode
       p.size(
         gl.drawingBufferWidth,
