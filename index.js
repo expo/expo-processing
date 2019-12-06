@@ -1,5 +1,5 @@
 import React from 'react';
-import { GLView } from 'expo';
+import { GLView } from 'expo-gl';
 
 const Browser = require('processing-js/lib/Browser');
 Browser.window = window;
