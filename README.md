@@ -31,25 +31,23 @@ OpenProcessing.org.
 
 In
 a
-[new blank Expo project](https://docs.expo.io/versions/v18.0.0/guides/up-and-running.html),
-run `npm i -S processing-js expo-processing` to install Processing.js and ExpoProcessing. Then replace
+[new blank Expo project](https://docs.expo.io/versions/latest/get-started/installation/),
+run `expo install processing-js expo-processing expo-gl` to install Processing.js and ExpoProcessing. Then replace
 `App.js` with the following:
 
 ```js
-import React from 'react';
-import { ProcessingView } from 'expo-processing';
+import React from "react";
+import { ProcessingView } from "expo-processing";
 
 export default class App extends React.Component {
   render() {
-    return (
-      <ProcessingView style={{ flex: 1 }} sketch={this._sketch} />
-    );
+    return <ProcessingView style={{ flex: 1 }} sketch={this._sketch} />;
   }
 
-  _sketch = (p) => {
+  _sketch = p => {
     p.setup = () => {
       p.strokeWeight(7);
-    }
+    };
 
     const harom = (ax, ay, bx, by, level, ratio) => {
       if (level <= 0) {
@@ -72,15 +70,21 @@ export default class App extends React.Component {
         ax * (1 - ratio) + bx * ratio,
         ay * (1 - ratio) + by * ratio,
         level - 1,
-        ratio);
-    }
+        ratio
+      );
+    };
 
     p.draw = () => {
       p.background(240);
       harom(
-        p.width - 142, p.height - 142, 142, p.height - 142, 6,
-        (p.sin(0.0005 * Date.now() % (2 * p.PI)) + 1) / 2);
-    }
-  }
+        p.width - 142,
+        p.height - 142,
+        142,
+        p.height - 142,
+        6,
+        (p.sin((0.0005 * Date.now()) % (2 * p.PI)) + 1) / 2
+      );
+    };
+  };
 }
 ````
