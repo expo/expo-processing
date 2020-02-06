@@ -1,4 +1,4 @@
-![demo](demo.gif "demo")
+![demo](https://raw.githubusercontent.com/expo/expo-processing/master/demo.gif "demo")
 
 *NOTE: GIF above looks weird some times because it's a GIF, the real thing is nice, I promise...*
 
